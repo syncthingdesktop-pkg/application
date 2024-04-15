@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+   <script>
+        // Function to attempt loading the original page after a 3-second delay
+        function attemptLoad() {
+            // URL of the original page you want to load
+            var originalPage = 'http://127.0.0.1:8384';
+            // Path to the fallback local HTML file
+            var fallbackPage = 'error.html';
+
+            // Set a 3-second delay before attempting to load the original page
+            setTimeout(function() {
+                // Attempt to load the original page
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', originalPage, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        // If the original page loads successfully, redirect to it
+                        window.location.href = originalPage;
+                    } else {
+                        // If the original page fails to load, redirect to the fallback local HTML file
+                        window.location.href = fallbackPage;
+                    }
+                };
+                xhr.send();
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+
+        // Call the attemptLoad function when the page loads
+        window.onload = attemptLoad;
+    </script>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <div id="cont" class="loader-cont">
+            <div class="dot-pulse"></div>
+            </div>
+        </div>
+</html>

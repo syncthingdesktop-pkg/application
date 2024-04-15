@@ -1,0 +1,21 @@
+{
+  "name": "SyncthingDesktop",
+  "version": "1.0.1",
+  "pkgrel": "1",
+  "description": "Unofficial Syncthing desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "author": "Corey Bruce",
+  "license": "GPL",
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.6.1"
+  }
+}

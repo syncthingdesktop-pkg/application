@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Syncthing Desktop
+Comment=Unofficial Synthing Desktop Application
+Icon=syncthing
+Exec=syncthingdesktop
+Actions=
+Categories=Utilities;
